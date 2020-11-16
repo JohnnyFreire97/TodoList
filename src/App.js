@@ -32,12 +32,15 @@ class App extends React.Component {
     return (
       <div>
         <h3>TAREFAS</h3>
-        <ToDoList itens = {this.state.itens}/>
+       
         <br/>
         <form onSubmit={this.handleSubmit}>
-          <input id="newToDo" onChange={this.state.text}/>
+          <input id="newToDo" onChange={this.handleChange}
+          value={this.state.text}/>
           <button>Inserir</button>
         </form>
+        <br/>
+        <ToDoList itens = {this.state.itens}/>
       </div>
     );
   }
